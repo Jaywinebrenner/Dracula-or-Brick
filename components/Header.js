@@ -25,6 +25,7 @@ const styles = StyleSheet.create({
     height: 80,
     padding: 15,
     backgroundColor: '#084177',
+    marginTop: 30
 
   },
   textOne: {

@@ -1,73 +1,30 @@
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
-import Header from './components/Header'
+import { Image, TouchableOpacity, StyleSheet, Text, View } from 'react-native';
+import dracula from '../assets/discount-dracula.png'
 
-export default function Dracula {
+const Dracula = () => {
   return (
     <View style={styles.container}>
-      <View style={[{flex: 1}, styles.elementsContainer]}>
-        <View style={styles.top}>
-          <Header/>
-        </View>
-        <View style={styles.middle}>
-
-          </View>
-
-        <View style={styles.bottom}>
-          <TouchableOpacity
-          style={styles.btn}
-          >
-            <Text style={styles.btnText}>
-            Go Home
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-          style={styles.btn}
-          >
-            <Text style={styles.btnText}>
-            Visit A Brick
-            </Text>
-          </TouchableOpacity>
-
-
-
-        </View>
-      </View>
+      <Image
+       source={require('../assets/discount-dracula.png')}
+       style={styles.dracula}
+       />
+     <Text>Dracula</Text>
     </View>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-  },
+    flex: 1
 
-  middle: {
-    flex: 2,
-    backgroundColor: '#FAA030'
   },
-  bottom: {
-    flex: 3,
-    backgroundColor: '#32B76C',
-    alignItems: 'center'
-  },
-  textOne: {
-    fontSize: 36,
-textAlign: 'center',
-fontWeight: '100',
-marginBottom: 24
-},
-btn: {
-  backgroundColor: 'firebrick',
-  padding: 9,
-  margin: 5,
-  width: 200,
+  dracula: {
+    width: 100,
+    height: 180
+  }
 
-},
-btnText: {
-  color: 'white',
-  fontSize: 20,
-  textAlign: 'center',
-},
+
 });
+
+export default Dracula

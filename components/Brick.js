@@ -1,40 +1,18 @@
 import React from 'react';
-import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
-import Header from './components/Header'
+import { TouchableOpacity, Image, StyleSheet, Text, View } from 'react-native';
 
-export default function Brick {
+
+const Brick = () => {
   return (
     <View style={styles.container}>
-      <View style={[{flex: 1}, styles.elementsContainer]}>
-        <View style={styles.top}>
-          <Header/>
-        </View>
-        <View style={styles.middle}>
-
-          </View>
-
-        <View style={styles.bottom}>
-          <TouchableOpacity
-          style={styles.btn}
-          >
-            <Text style={styles.btnText}>
-            Go Home
-            </Text>
-          </TouchableOpacity>
-
-          <TouchableOpacity
-          style={styles.btn}
-          >
-            <Text style={styles.btnText}>
-            Visit Dracula
-            </Text>
-          </TouchableOpacity>
-
-
-
-        </View>
-      </View>
+      <Image
+        source={require('../assets/bricks.jpg')}
+        />
+      <Text>Brick</Text>
     </View>
+
+
+
   );
 }
 
@@ -71,3 +49,6 @@ btnText: {
   textAlign: 'center',
 },
 });
+
+
+export default Brick
