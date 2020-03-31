@@ -1,13 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 
-
-
-
-
-
-
-export default function App() {
+export default function Home ( {navigation}) {
 
   return (
     <View style={styles.container}>
@@ -15,6 +9,7 @@ export default function App() {
     </Text>
           <TouchableOpacity
           style={styles.btn}
+          onPress={()=> this.props.navigation.navigate('Dracula')}
           >
             <Text style={styles.btnText}>
             Visit Dracula
@@ -23,6 +18,7 @@ export default function App() {
 
           <TouchableOpacity
           style={styles.btn}
+                    onPress={()=> this.props.navigation.navigate('Brick')}
           >
             <Text style={styles.btnText}>
             Visit A Brick

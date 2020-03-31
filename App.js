@@ -16,17 +16,17 @@ export default function App() {
 
       <View style={[{flex: 1}, styles.elementsContainer]}>
           <Header/>
-
         <View style={styles.middle}>
           <Home/>
-
         </View>
 
         <View style={styles.bottom}>
           <NavigationContainer>
             <Stack.Navigator>
               <Stack.Screen name="Brick" component={Brick} />
+              <Stack.Screen name="Dracula" component={Dracula}
 
+                />
             </Stack.Navigator>
             </NavigationContainer>
 

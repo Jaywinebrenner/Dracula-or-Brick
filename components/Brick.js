@@ -1,7 +1,6 @@
 import React from 'react';
 import { TouchableOpacity, Image, StyleSheet, Text, View } from 'react-native';
 
-
 const Brick = () => {
   return (
     <View style={styles.container}>
@@ -10,9 +9,6 @@ const Brick = () => {
         />
       <Text>Brick</Text>
     </View>
-
-
-
   );
 }
 
