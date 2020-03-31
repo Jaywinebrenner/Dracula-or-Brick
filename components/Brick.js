@@ -1,7 +1,7 @@
 import React from 'react';
 import { TouchableOpacity, Image, StyleSheet, Text, View } from 'react-native';
 
-const Brick = () => {
+const Brick = (props) => {
   return (
     <View style={styles.container}>
       <Image

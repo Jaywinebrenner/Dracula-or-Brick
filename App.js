@@ -6,6 +6,7 @@ import Home from './components/Home'
 import Header from './components/Header'
 import Dracula from './components/Dracula';
 import Brick from './components/Brick';
+import Landing from './components/Landing'
 
 const Stack = createStackNavigator();
 
@@ -20,18 +21,18 @@ export default function App() {
           <Home/>
         </View>
 
-        <View style={styles.bottom}>
+
+
           <NavigationContainer>
             <Stack.Navigator>
-              <Stack.Screen name="Brick" component={Brick} />
-              <Stack.Screen name="Dracula" component={Dracula}
-
+              <Stack.Screen name="Landing" component={Landing}
                 />
+              <Stack.Screen name="Brick" component={Brick} />
             </Stack.Navigator>
             </NavigationContainer>
 
 
-        </View>
+
       </View>
     </View>
   );
@@ -43,13 +44,8 @@ const styles = StyleSheet.create({
   },
 
   middle: {
-    flex: 1,
+    flex: .2,
     backgroundColor: '#FAA030'
-  },
-  bottom: {
-    flex: 3,
-    backgroundColor: '#32B76C',
-    alignItems: 'center'
   },
   textOne: {
     fontSize: 36,

@@ -11,7 +11,7 @@ const Header = (props) => {
     <View style={styles.header}>
 
 
-        <Text style={styles.textOne}>The Place Visitor</Text>
+        <Text style={styles.textOne}>Dracula or Brick?</Text>
         <Text style={styles.textTwo}>A place where you can visit Dracula or a Brick</Text>
 
     </View>
@@ -25,7 +25,7 @@ const styles = StyleSheet.create({
     height: 80,
     padding: 15,
     backgroundColor: '#084177',
-    marginTop: 30
+    marginTop: 60
 
   },
   textOne: {

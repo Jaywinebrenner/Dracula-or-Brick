@@ -2,7 +2,7 @@ import React from 'react';
 import { Image, TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 import dracula from '../assets/discount-dracula.png'
 
-const Dracula = () => {
+const Dracula = (props) => {
   return (
     <View style={styles.container}>
       <Image
