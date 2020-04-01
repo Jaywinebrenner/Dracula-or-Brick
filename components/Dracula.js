@@ -4,24 +4,27 @@ import dracula from '../assets/discount-dracula.png'
 
 const Dracula = (props) => {
   return (
-    <View style={styles.container}>
+    <View style={styles.bottom}>
       <Image
        source={require('../assets/discount-dracula.png')}
        style={styles.dracula}
        />
-     <Text>Dracula</Text>
+  
     </View>
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1
-
+  bottom: {
+    marginTop: 220,
+    height: 700,
+    backgroundColor: '#084177',
+    alignItems: 'center',
   },
   dracula: {
     width: 100,
-    height: 180
+    height: 180,
+    marginTop: 100
   }
 
 

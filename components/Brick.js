@@ -1,9 +1,10 @@
 import React from 'react';
 import { TouchableOpacity, Image, StyleSheet, Text, View } from 'react-native';
 
-const Brick = (props) => {
+
+const Brick = () => {
   return (
-    <View style={styles.container}>
+    <View style={styles.bottomBrick}>
       <Image
         source={require('../assets/bricks.jpg')}
         />
@@ -13,37 +14,12 @@ const Brick = (props) => {
 }
 
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
+  bottomBrick: {
+    marginTop: 220,
+    height: 700,
+    backgroundColor: '#084177',
+    alignItems: 'center',
   },
-
-  middle: {
-    flex: 2,
-    backgroundColor: '#FAA030'
-  },
-  bottom: {
-    flex: 3,
-    backgroundColor: '#32B76C',
-    alignItems: 'center'
-  },
-  textOne: {
-    fontSize: 36,
-textAlign: 'center',
-fontWeight: '100',
-marginBottom: 24
-},
-btn: {
-  backgroundColor: 'firebrick',
-  padding: 9,
-  margin: 5,
-  width: 200,
-
-},
-btnText: {
-  color: 'white',
-  fontSize: 20,
-  textAlign: 'center',
-},
 });
 
 

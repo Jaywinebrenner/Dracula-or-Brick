@@ -3,13 +3,19 @@ import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 
 export default function Home ( props ) {
 
+
+clickDracula = () => {
+  this.props.addPlayer(this.state.inputValue);
+this.setState({ inputValue: ''})
+}
+
   return (
     <View style={styles.container}>
     <Text style={styles.btnText}>
     </Text>
           <TouchableOpacity
           style={styles.btn}
-          onPress={()=> this.props.navigation.navigate('Dracula')}
+          onPress={()=> clickDracula}
           >
             <Text style={styles.btnText}>
             Visit Dracula
@@ -18,14 +24,12 @@ export default function Home ( props ) {
 
           <TouchableOpacity
           style={styles.btn}
-                    onPress={()=> this.props.navigation.navigate('Brick')}
+          onPress={()=> clickDracula}
           >
             <Text style={styles.btnText}>
             Visit A Brick
             </Text>
           </TouchableOpacity>
-
-
 
         </View>
 
@@ -59,7 +63,6 @@ btn: {
   margin: 5,
   width: 200,
   borderRadius: 10
-
 },
 btnText: {
   color: 'white',

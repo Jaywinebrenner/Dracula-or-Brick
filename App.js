@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
@@ -8,62 +8,101 @@ import Dracula from './components/Dracula';
 import Brick from './components/Brick';
 import Landing from './components/Landing'
 
+
+
+
 const Stack = createStackNavigator();
 
-export default function App() {
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      draculaActive: false,
+      brickActive: false,
+      toggleView: null
+    };
+  }
+
+
+    toggleDracula= () => {
+      console.log("LICK");
+      this.setState(prevState => ({
+        toggleView: !prevState.toggleView
+      }));
+      console.log(this.state.toggleView);
+    }
+
+    toggleBrick= () => {
+      console.log("LICK");
+      this.setState(prevState => ({
+        toggleView: !prevState.toggleView
+      }));
+      console.log(this.state.toggleView);
+    }
+
+  render() {
+
+    let draculaVisible = null
+    let brickVisible = null
+    let currentVisibleState = null
+
+
+    if(this.state.toggleView) {
+      currentVisibleState = <Dracula/>
+    } else if (this.state.toggleView === false){
+      currentVisibleState = <Brick/>
+    } else {
+      currentVisibleState= null
+    }
+
+
 
   return (
     <View style={styles.container}>
 
+
       <View style={[{flex: 1}, styles.elementsContainer]}>
-          <Header/>
+          <Header
+           toggleDracula={this.toggleDracula}
+           toggleBrick={this.toggleBrick}
+
+            />
+
+
+
         <View style={styles.middle}>
-          <Home/>
+          {currentVisibleState}
         </View>
 
-
-
-          <NavigationContainer>
-            <Stack.Navigator>
-              <Stack.Screen name="Landing" component={Landing}
-                />
-              <Stack.Screen name="Brick" component={Brick} />
-            </Stack.Navigator>
-            </NavigationContainer>
-
-
-
       </View>
+
     </View>
   );
 }
+}
 
+console.log(this.state);
 const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-  },
 
-  middle: {
-    flex: .2,
-    backgroundColor: '#FAA030'
-  },
   textOne: {
     fontSize: 36,
     textAlign: 'center',
     fontWeight: '100',
     marginBottom: 24
 },
-btn: {
-    backgroundColor: 'firebrick',
-    padding: 9,
-    margin: 5,
-    width: 200,
-    borderRadius: 10
-
-},
 btnText: {
-      color: 'white',
-      fontSize: 20,
-      textAlign: 'center',
+  fontSize: 39,
+  color: 'black'
+},
+btn: {
+  backgroundColor: 'firebrick',
+  padding: 9,
+  margin: 5,
+  width: 200,
+  borderRadius: 10
 },
 });
+
+export default App;
