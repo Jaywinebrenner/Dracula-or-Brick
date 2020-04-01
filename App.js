@@ -24,22 +24,24 @@ class App extends Component {
       toggleView: null
     };
   }
-
-
     toggleDracula= () => {
-      console.log("LICK");
+      console.log("DRACUCLA");
       this.setState(prevState => ({
-        toggleView: !prevState.toggleView
+        draculaActive: true,
+        brickActive: false
       }));
-      console.log(this.state.toggleView);
+      console.log(this.state.draculaActive)
+      console.log(this.state.brickActive);
     }
 
     toggleBrick= () => {
-      console.log("LICK");
+      console.log("DRACUCLA");
       this.setState(prevState => ({
-        toggleView: !prevState.toggleView
+        brickActive: true,
+        draculaActive: false
       }));
-      console.log(this.state.toggleView);
+      console.log(this.state.draculaActive)
+      console.log(this.state.brickActive);
     }
 
   render() {
@@ -49,9 +51,9 @@ class App extends Component {
     let currentVisibleState = null
 
 
-    if(this.state.toggleView) {
+    if(this.state.draculaActive) {
       currentVisibleState = <Dracula/>
-    } else if (this.state.toggleView === false){
+    } else if (this.state.brickActive=== true){
       currentVisibleState = <Brick/>
     } else {
       currentVisibleState= null

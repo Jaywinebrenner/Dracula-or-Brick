@@ -1,6 +1,6 @@
 import React from 'react';
 import { Image, TouchableOpacity, StyleSheet, Text, View } from 'react-native';
-import dracula from '../assets/discount-dracula.png'
+import dracula from '../assets/discount-dracula.png';
 
 const Dracula = (props) => {
   return (
@@ -9,7 +9,9 @@ const Dracula = (props) => {
        source={require('../assets/discount-dracula.png')}
        style={styles.dracula}
        />
-  
+     <Image style= { styles.backgroundImage } source={require('../assets/moon.jpg')}>
+  </Image>
+
     </View>
   );
 }
