@@ -1,33 +1,39 @@
 import React from 'react';
-import { Image, TouchableOpacity, StyleSheet, Text, View } from 'react-native';
+import { ImageBackground, Image, TouchableOpacity, StyleSheet, Text, View } from 'react-native';
 import dracula from '../assets/discount-dracula.png';
+import moon from '../assets/moon.jpg';
 
 const Dracula = (props) => {
   return (
-    <View style={styles.bottom}>
+    <ImageBackground
+      source={require('../assets/moon.jpg')}
+      style={styles.bottom}>
       <Image
        source={require('../assets/discount-dracula.png')}
        style={styles.dracula}
        />
-     <Image style= { styles.backgroundImage } source={require('../assets/moon.jpg')}>
-  </Image>
 
-    </View>
+
+
+   </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
   bottom: {
-    marginTop: 220,
-    height: 700,
+    flex: 1,
+
+    marginTop: 200,
+    height: 350,
     backgroundColor: '#084177',
     alignItems: 'center',
   },
   dracula: {
-    width: 100,
-    height: 180,
-    marginTop: 100
-  }
+    width: 150,
+    height: 260,
+    marginTop: 30
+  },
+
 
 
 });
